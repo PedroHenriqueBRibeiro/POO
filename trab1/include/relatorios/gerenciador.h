@@ -6,7 +6,6 @@
 #include "../lista/lista.h"
 #include "../io/leitor.h"
 
-// Gerenciador principal dos relatórios
 typedef struct {
     Lista* todos_compromissos;
     Lista* confirmados;
@@ -14,8 +13,6 @@ typedef struct {
     Lista* cancelados;
     PosicoesRelatorio posicoes;
 } GerenciadorRelatorios;
-
-// Funções do gerenciador
 GerenciadorRelatorios* gerenciador_criar();
 void gerenciador_carregar_dados(GerenciadorRelatorios* gerenciador, 
                                const char* agenda_path, const char* posicoes_path);

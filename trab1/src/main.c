@@ -1,43 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../include/common.h"
+#include "../include/data/data.h"
+#include "../include/data/hora.h"
+#include "../include/data/datetime.h"
+#include "../include/lista/lista.h"
+#include "../include/classes/compromisso.h"
 #include "../include/relatorios/gerenciador.h"
 
 int main() {
-    printf("=== SISTEMA DE FILTRO DE COMPROMISSOS ===\n");
-    printf("Iniciando...\n");
-    
-    // Cria e configura gerenciador
+    printf("SISTEMA DE FILTRO DE COMPROMISSOS\n");
     GerenciadorRelatorios* gerenciador = gerenciador_criar();
     if (gerenciador == NULL) {
-        printf("Erro: Não foi possível criar o gerenciador.\n");
+        printf("Erro\n");
         return 1;
     }
-    
-    // Carrega dados
     printf("Carregando dados...\n");
     gerenciador_carregar_dados(gerenciador, "exemplos/agenda.txt", "exemplos/posicoes.txt");
-    
     if (gerenciador->todos_compromissos == NULL) {
-        printf("Erro: Não foi possível carregar os compromissos.\n");
+        printf("Erro\n");
         gerenciador_destruir(gerenciador);
         return 1;
     }
-    
     printf("Compromissos carregados: %d\n", lista_tamanho(gerenciador->todos_compromissos));
-    
-    // Gera relatórios
-    printf("Gerando relatórios...\n");
     gerenciador_gerar_relatorios(gerenciador);
-    
-    // Calcula resultado final
-    printf("Calculando resultado final...\n");
     gerenciador_calcular_resultado(gerenciador);
-    
-    // Limpeza
     gerenciador_destruir(gerenciador);
-    
-    printf("=== PROCESSAMENTO CONCLUÍDO ===\n");
     printf("Relatórios gerados:\n");
     printf("- relatconfirmados.txt\n");
     printf("- relatadiados.txt\n");

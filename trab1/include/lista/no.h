@@ -8,8 +8,6 @@ typedef struct No {
     struct No* proximo;
     struct No* anterior;
 } No;
-
-// Funções do nó
 No* no_criar(void* dado);
 void no_destruir(No* no);
 

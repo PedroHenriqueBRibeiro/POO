@@ -1,0 +1,49 @@
+000001: Aula de Programação I
+Início: 15/07/2009 09:00
+Fim: 15/07/2009 11:00
+Prioridade: 6
+Nível: Graduação
+
+000002: Aula de Processamento de Dados I
+Início: 14/07/2009 14:00
+Fim: 14/07/2009 17:00
+Prioridade: 6
+Nível: Graduação
+
+000003: Consulta Médica
+Início: 15/07/2009 10:00
+Fim: 15/07/2009 11:00
+Prioridade: 4
+Local: Clínica São José
+
+000004: Orientação de Marcelo
+Início: 14/07/2009 11:00
+Fim: 14/07/2009 12:00
+Prioridade: 4
+Nível: Graduação
+Assunto: Sistemas Nebulosos
+
+000005: Orientação de Fabio
+Início: 14/07/2009 09:00
+Fim: 14/07/2009 10:00
+Prioridade: 8
+Nível: Graduação
+Assunto: Iniciação Científica
+
+000006: Aula de Sistemas Inteligentes
+Início: 15/07/2009 09:00
+Fim: 15/07/2009 11:00
+Prioridade: 6
+Nível: Mestrado
+
+000007: Reunião de Departamento
+Início: 14/07/2009 09:00
+Fim: 14/07/2009 12:00
+Prioridade: 8
+Assunto: Afastamentos
+
+000008: Congresso da SBC
+Início: 13/07/2009 09:00
+Fim: 18/07/2009 09:00
+Prioridade: 12
+Local: Bento Gonçalves

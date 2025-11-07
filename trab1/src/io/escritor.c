@@ -3,16 +3,13 @@
 #include "../../include/relatorios/adiados.h"
 #include "../../include/relatorios/cancelados.h"
 #include "../../include/relatorios/completo.h"
+#include "../../include/lista/no.h"
 #include <stdio.h>
 
 void escrever_relatorio_confirmados(Lista* compromissos, const char* nome_arquivo) {
     FILE* arquivo = fopen(nome_arquivo, "w");
     if (arquivo == NULL) return;
-    
-    // Ordena compromissos
     confirmados_ordenar(compromissos);
-    
-    // Escreve cada compromisso
     No* atual = compromissos->inicio;
     while (atual != NULL) {
         Compromisso* comp = (Compromisso*)atual->dado;
@@ -26,7 +23,6 @@ void escrever_relatorio_confirmados(Lista* compromissos, const char* nome_arquiv
     fclose(arquivo);
 }
 
-// Padrão similar para os outros relatórios...
 void escrever_relatorio_adiados(Lista* compromissos, const char* nome_arquivo) {
     FILE* arquivo = fopen(nome_arquivo, "w");
     if (arquivo == NULL) return;
@@ -81,5 +77,13 @@ void escrever_relatorio_completo(Lista* compromissos, const char* nome_arquivo) 
         atual = atual->proximo;
     }
     
+    fclose(arquivo);
+}
+
+void escrever_resultado(int resultado, const char* nome_arquivo) {
+    FILE* arquivo = fopen(nome_arquivo, "w");
+    if (arquivo == NULL) return;
+    
+    fprintf(arquivo, "%d\n", resultado);
     fclose(arquivo);
 }

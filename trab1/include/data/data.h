@@ -3,13 +3,11 @@
 
 #include "../common.h"
 
-typedef struct {
+typedef struct Data {
     int dia;
     int mes;
     int ano;
 } Data;
-
-// Funções para Data
 Data criar_data(int dia, int mes, int ano);
 Data ler_data(const char* str_data);
 void imprimir_data(Data data);

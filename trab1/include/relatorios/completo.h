@@ -3,8 +3,9 @@
 
 #include "../common.h"
 #include "../classes/compromisso.h"
-
-// Funções específicas do relatório completo
+#include "../lista/lista.h"
+#include "../data/datetime.h"
+#include "../filtro/prioridade.h"
 void completo_ordenar(Lista* compromissos);
 char* completo_formatar_linha(Compromisso* comp);
 

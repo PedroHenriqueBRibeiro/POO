@@ -5,7 +5,6 @@
 #include "../classes/compromisso.h"
 #include "../lista/lista.h"
 
-// Funções de escrita
 void escrever_relatorio_confirmados(Lista* compromissos, const char* nome_arquivo);
 void escrever_relatorio_adiados(Lista* compromissos, const char* nome_arquivo);
 void escrever_relatorio_cancelados(Lista* compromissos, const char* nome_arquivo);

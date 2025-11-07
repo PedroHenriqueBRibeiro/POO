@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-// Comparador para ordenação de cancelados (duração crescente)
 int comparador_cancelados(void* a, void* b) {
     CompromissoCancelado* cc1 = (CompromissoCancelado*)a;
     CompromissoCancelado* cc2 = (CompromissoCancelado*)b;

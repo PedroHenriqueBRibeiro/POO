@@ -3,14 +3,9 @@
 
 #include "../common.h"
 #include "../classes/compromisso.h"
-
-// Estrutura para compromisso adiado com info do conflito
-typedef struct {
-    Compromisso* compromisso;
-    Compromisso* conflitante; // compromisso que forçou o adiamento
-} CompromissoAdiado;
-
-// Funções específicas do relatório de adiados
+#include "../lista/lista.h"
+#include "tipos.h"
+#include "../filtro/prioridade.h"
 void adiados_ordenar(Lista* compromissos_adiados);
 char* adiados_formatar_linha(CompromissoAdiado* comp_adiado);
 

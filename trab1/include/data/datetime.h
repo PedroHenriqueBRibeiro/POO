@@ -4,12 +4,11 @@
 #include "data.h"
 #include "hora.h"
 
-typedef struct {
+typedef struct DateTime {
     Data data;
     Hora hora;
 } DateTime;
 
-// Funções para DateTime
 DateTime criar_datetime(Data data, Hora hora);
 DateTime ler_datetime(const char* str_data, const char* str_hora);
 void imprimir_datetime(DateTime dt);

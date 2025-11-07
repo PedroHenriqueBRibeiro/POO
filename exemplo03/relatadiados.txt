@@ -1,0 +1,19 @@
+000007
+Reunião de Departamento
+8
+000008
+
+000005
+Orientação de Fabio
+8
+000008
+
+000004
+Orientação de Marcelo
+4
+000008
+
+000003
+Consulta Médica
+4
+000008

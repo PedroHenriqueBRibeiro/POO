@@ -3,14 +3,9 @@
 
 #include "../common.h"
 #include "../classes/compromisso.h"
-
-// Estrutura para compromisso cancelado com info do conflito
-typedef struct {
-    Compromisso* compromisso;
-    Compromisso* conflitante; // compromisso que forçou o cancelamento
-} CompromissoCancelado;
-
-// Funções específicas do relatório de cancelados
+#include "../lista/lista.h"
+#include "tipos.h"
+#include "../filtro/prioridade.h"
 void cancelados_ordenar(Lista* compromissos_cancelados);
 char* cancelados_formatar_linha(CompromissoCancelado* comp_cancelado);
 

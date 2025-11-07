@@ -1,0 +1,14 @@
+000006
+Aula de Sistemas Inteligentes
+6
+000008
+
+000001
+Aula de Programação I
+6
+000008
+
+000002
+Aula de Processamento de Dados I
+6
+000008

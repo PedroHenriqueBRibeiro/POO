@@ -3,12 +3,11 @@
 
 #include "../common.h"
 
-typedef struct {
+typedef struct Hora {
     int hora;
     int minuto;
 } Hora;
 
-// Funções para Hora
 Hora criar_hora(int hora, int minuto);
 Hora ler_hora(const char* str_hora);
 void imprimir_hora(Hora hora);

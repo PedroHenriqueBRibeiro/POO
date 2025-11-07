@@ -1,4 +1,6 @@
 #include "../../include/lista/lista.h"
+#include "../../include/lista/no.h"
+#include "../../include/lista/ordenacao.h"
 #include <stdlib.h>
 
 Lista* lista_criar() {
@@ -81,8 +83,6 @@ void* lista_buscar(Lista* lista, int (*comparador)(void*, void*), void* alvo) {
 
 void lista_ordenar(Lista* lista, int (*comparador)(void*, void*)) {
     if (lista == NULL || comparador == NULL || lista->tamanho < 2) return;
-    
-    // Converte lista para array para ordenação
     void** array = (void**)malloc(lista->tamanho * sizeof(void*));
     if (array == NULL) return;
     
@@ -91,11 +91,7 @@ void lista_ordenar(Lista* lista, int (*comparador)(void*, void*)) {
         array[i] = atual->dado;
         atual = atual->proximo;
     }
-    
-    // Ordena o array
     ordenar_lista(array, lista->tamanho, comparador);
-    
-    // Reconstrói a lista ordenada
     atual = lista->inicio;
     for (int i = 0; i < lista->tamanho; i++) {
         atual->dado = array[i];

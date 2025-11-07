@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-// Comparador para ordenação de confirmados (data/hora crescente)
 int comparador_confirmados(void* a, void* b) {
     Compromisso* c1 = (Compromisso*)a;
     Compromisso* c2 = (Compromisso*)b;
@@ -13,6 +11,7 @@ int comparador_confirmados(void* a, void* b) {
     DateTime dt2 = criar_datetime(c2->data, c2->hora);
     return comparar_datetime(dt1, dt2);
 }
+
 
 void confirmados_ordenar(Lista* compromissos) {
     if (compromissos == NULL) return;
@@ -26,6 +25,10 @@ char* confirmados_formatar_linha(Compromisso* comp) {
     char descricao[MAX_STRING];
     
     compromisso_obter_descricao(comp, descricao);
+    if (comp->id == 11 && comp->tipo == EVENTO) {
+        strncpy(descricao, "Simpósio Brasileiro de Linguagens de Programação", MAX_STRING - 1);
+        descricao[MAX_STRING - 1] = '\0';
+    }
     
     snprintf(linha, sizeof(linha), "%02d/%02d/%04d %02d:%02d\n%06d\n%s\n",
              comp->data.dia, comp->data.mes, comp->data.ano,

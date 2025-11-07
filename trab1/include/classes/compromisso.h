@@ -3,15 +3,7 @@
 
 #include "../common.h"
 #include "../data/data.h"
-
-// Enum para nível (Graduação, Especialização, Mestrado)
-typedef enum {
-    GRADUACAO,
-    ESPECIALIZACAO,
-    MESTRADO
-} Nivel;
-
-// Union para dados específicos de cada tipo
+#include "../data/hora.h"
 typedef union {
     struct {
         char nome_disciplina[MAX_STRING];
@@ -40,8 +32,6 @@ typedef union {
         char local[MAX_STRING];
     } dados_particular;
 } DadosCompromisso;
-
-// Struct principal do compromisso (classe base)
 typedef struct Compromisso {
     int id;
     TipoCompromisso tipo;
@@ -54,8 +44,6 @@ typedef struct Compromisso {
     
     DadosCompromisso dados_especificos;
 } Compromisso;
-
-// Funções da classe base
 Compromisso* compromisso_criar_base(int id, TipoCompromisso tipo, Data data, Hora hora, 
                                    int duracao_minutos, int grau_prioridade);
 int compromisso_calcular_prioridade(Compromisso* comp);

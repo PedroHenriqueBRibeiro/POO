@@ -3,8 +3,8 @@
 
 #include "../common.h"
 #include "../classes/compromisso.h"
-
-// Funções específicas do relatório de confirmados
+#include "../lista/lista.h"
+#include "../data/datetime.h"
 void confirmados_ordenar(Lista* compromissos);
 char* confirmados_formatar_linha(Compromisso* comp);
 

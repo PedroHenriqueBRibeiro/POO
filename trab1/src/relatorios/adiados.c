@@ -3,19 +3,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-// Comparador para ordenação de adiados (prioridade decrescente)
 int comparador_adiados(void* a, void* b) {
     CompromissoAdiado* ca1 = (CompromissoAdiado*)a;
     CompromissoAdiado* ca2 = (CompromissoAdiado*)b;
     
     int p1 = calcular_prioridade_final(ca1->compromisso);
     int p2 = calcular_prioridade_final(ca2->compromisso);
-    
-    // Ordem decrescente
     return p2 - p1;
 }
-
 void adiados_ordenar(Lista* compromissos_adiados) {
     if (compromissos_adiados == NULL) return;
     lista_ordenar(compromissos_adiados, comparador_adiados);

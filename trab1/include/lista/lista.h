@@ -2,8 +2,6 @@
 #define LISTA_H
 
 #include "../common.h"
-
-// Forward declaration
 typedef struct No No;
 
 typedef struct {
@@ -11,8 +9,6 @@ typedef struct {
     No* fim;
     int tamanho;
 } Lista;
-
-// Funções da lista genérica
 Lista* lista_criar();
 void lista_destruir(Lista* lista);
 void lista_inserir_fim(Lista* lista, void* dado);
