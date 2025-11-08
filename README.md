@@ -5,12 +5,15 @@
 ## Aluno: Pedro Henrique Barbosa Ribeiro  
 ## Matrícula: 2121934GCOM
 
-# Como usar  
+# Como usar
+
 - cd trabx (trab1, trab2, trab3 ou trab4)  
 - make  
-- ./agenda  
-- Ou apenas make run  
+- ./agenda
+- Ou apenas make run
 - Conferir a pasta gerada 'resultados'
+- make clean
+- Para testar outros exemplos, copiar e colar dentro de trabx/agenda.txt e trabx/posicoes/txt os exemplos disponíveis de agenda e posicoes em exemplo02 ou exemplo03.
 
 
 ## Estrutura dos Trabalhos
