@@ -15,9 +15,9 @@ run: $(TARGET)
 
 clean:
 	rm -f $(OBJECTS) $(TARGET)
+	rm -rf resultados
 
 distclean: clean
 	rm -f relatconfirmados.txt relatadiados.txt relatcancelados.txt relatcompromissos.txt resultado.txt
-	rm -rf resultados
 
 .PHONY: clean distclean run
