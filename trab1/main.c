@@ -20,25 +20,12 @@ static void create_dir_if_not_exists(const char* dirname) {
 }
 
 int main(void) {
-    char exemplo[64];
-    char path_agenda[128];
-    char path_posicoes[128];
-    char path_resultados[128];
-
-    printf("Digite o nome do exemplo a ser usado (exemplo01, exemplo02 ou exemplo03): ");
-    if (scanf("%63s", exemplo) != 1) {
-        fprintf(stderr, "Erro: entrada inválida.\n");
-        return 1;
-    }
-
-    snprintf(path_agenda, sizeof(path_agenda), "../%s/agenda.txt", exemplo);
-    snprintf(path_posicoes, sizeof(path_posicoes), "../%s/posicoes.txt", exemplo);
-    
-    snprintf(path_resultados, sizeof(path_resultados), "resultados/%s", exemplo);
-    create_dir_if_not_exists("resultados");
+    const char* path_agenda = "agenda.txt";
+    const char* path_posicoes = "posicoes.txt";
+    const char* path_resultados = "resultados";
     create_dir_if_not_exists(path_resultados);
 
-    fprintf(stderr, "[debug] lendo arquivos de '%s'\n", exemplo);
+    fprintf(stderr, "[debug] lendo arquivos da pasta atual\n");
     fprintf(stderr, "[debug] caminho agenda: %s\n", path_agenda);
     fprintf(stderr, "[debug] caminho posicoes: %s\n", path_posicoes);
     fprintf(stderr, "[debug] pasta resultados: %s\n", path_resultados);
