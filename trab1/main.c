@@ -50,6 +50,7 @@ int main(void) {
     fprintf(stderr, "[debug] adiados (N=%zu):", B.ndel);
     for (size_t t = 0; t < B.ndel; t++) fprintf(stderr, " %06d", B.delayed[t]->id);
     fprintf(stderr, "\n");
+
     char relat_confirmados[256], relat_adiados[256], relat_cancelados[256], relat_compromissos[256], relat_resultado[256];
     
     snprintf(relat_confirmados, sizeof(relat_confirmados), "%s/relatconfirmados.txt", path_resultados);
@@ -112,9 +113,13 @@ int main(void) {
         free(CANC);
         free(ALL);
     }
-
     free(A_all);
     free(A);
     list_free(agenda_list, free_appt);
+    
+    free(B.confirmed);
+    free(B.delayed);
+    free(B.canceled);
+    
     return 0;
 }
